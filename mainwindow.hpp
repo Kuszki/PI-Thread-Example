@@ -71,6 +71,8 @@ class MainWindow : public QMainWindow
 
 		void aboutClicked(void); //!< Wybrano "O programie".
 
+		void aboutqtClicked(void); //!< Wybrano "O Qt".
+
 		void progressDone(void); //!< Zakończono obliczenia.
 
 	signals:

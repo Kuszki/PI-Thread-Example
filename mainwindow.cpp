@@ -20,6 +20,7 @@
 
 #include "mainwindow.hpp"
 #include "qaction.h"
+#include "qmessagebox.h"
 #include "qtextbrowser.h"
 #include "ui_mainwindow.h"
 
@@ -99,6 +100,10 @@ MainWindow::MainWindow(QWidget *parent)
 	// Wyświetlanie "O programie"
 	connect(ui->actionAbout, &QAction::triggered,
 	        this, &MainWindow::aboutClicked);
+
+	// Wyświetlanie "O Qt"
+	connect(ui->actionAboutQt, &QAction::triggered,
+	        this, &MainWindow::aboutqtClicked);
 
 	// Uruchamianie obliczeń
 	connect(ui->actionRun, &QAction::triggered,
@@ -191,6 +196,11 @@ void MainWindow::aboutClicked(void)
 	QMessageBox::about(this, tr("About program"),
 	                   tr("PI-Thread-Example program. See project repository at "
 	                      "<a href=https://github.com/Kuszki/PI-Thread-Example>GitHub</a>."));
+}
+
+void MainWindow::aboutqtClicked(void)
+{
+	QMessageBox::aboutQt(this);
 }
 
 void MainWindow::valueReady(int value)

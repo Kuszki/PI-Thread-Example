@@ -24,94 +24,99 @@
         <translation>Pomoc</translation>
     </message>
     <message>
-        <location filename="mainwindow.ui" line="84"/>
-        <location filename="mainwindow.ui" line="156"/>
+        <location filename="mainwindow.ui" line="85"/>
+        <location filename="mainwindow.ui" line="157"/>
         <source>Settings</source>
         <translation>Ustawienia</translation>
     </message>
     <message>
-        <location filename="mainwindow.ui" line="108"/>
+        <location filename="mainwindow.ui" line="109"/>
         <source>Run</source>
         <translation>Uruchom</translation>
     </message>
     <message>
-        <location filename="mainwindow.ui" line="111"/>
+        <location filename="mainwindow.ui" line="112"/>
         <source>Ctrl+R</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="mainwindow.ui" line="120"/>
+        <location filename="mainwindow.ui" line="121"/>
         <source>Stop</source>
         <translation>Zatrzymaj</translation>
     </message>
     <message>
-        <location filename="mainwindow.ui" line="123"/>
+        <location filename="mainwindow.ui" line="124"/>
         <source>Ctrl+D</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="mainwindow.ui" line="132"/>
+        <location filename="mainwindow.ui" line="133"/>
         <source>Exit</source>
         <translation>Zakończ</translation>
     </message>
     <message>
-        <location filename="mainwindow.ui" line="135"/>
+        <location filename="mainwindow.ui" line="136"/>
         <source>Ctrl+Q</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="mainwindow.ui" line="144"/>
+        <location filename="mainwindow.ui" line="145"/>
         <source>About</source>
         <translation>O programie</translation>
     </message>
     <message>
-        <location filename="mainwindow.ui" line="147"/>
+        <location filename="mainwindow.ui" line="148"/>
         <source>F1</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="mainwindow.ui" line="164"/>
+        <location filename="mainwindow.ui" line="166"/>
         <source>Clear</source>
         <translation>Wyczyść</translation>
     </message>
     <message>
-        <location filename="mainwindow.ui" line="167"/>
+        <location filename="mainwindow.ui" line="169"/>
         <source>F5</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="mainwindow.cpp" line="43"/>
+        <location filename="mainwindow.ui" line="177"/>
+        <source>About Qt</source>
+        <translation>O Qt</translation>
+    </message>
+    <message>
+        <location filename="mainwindow.cpp" line="44"/>
         <source>Job count: </source>
         <translation>Liczba zadań: </translation>
     </message>
     <message>
-        <location filename="mainwindow.cpp" line="148"/>
+        <location filename="mainwindow.cpp" line="153"/>
         <source>%1 -&gt; Sending job request</source>
         <translation>%1 -&gt; Wysyłanie żądania wykonania obliczeń</translation>
     </message>
     <message>
-        <location filename="mainwindow.cpp" line="163"/>
+        <location filename="mainwindow.cpp" line="168"/>
         <source>%1 -&gt; Sending terminate request</source>
         <translation>%1 -&gt; Wysyłanie żądania zakończenia obliczeń</translation>
     </message>
     <message>
-        <location filename="mainwindow.cpp" line="191"/>
+        <location filename="mainwindow.cpp" line="196"/>
         <source>About program</source>
         <translation>O programie</translation>
     </message>
     <message>
-        <location filename="mainwindow.cpp" line="192"/>
+        <location filename="mainwindow.cpp" line="197"/>
         <source>PI-Thread-Example program. See project repository at &lt;a href=https://github.com/Kuszki/PI-Thread-Example&gt;GitHub&lt;/a&gt;.</source>
         <oldsource>PI-Thread-Example program. See project repository at &lt;a href=https://github.com/Kuszki/PI-Thread-Example&gt;GitHub&lt;/a&gt;</oldsource>
         <translation>Przykładowy program prezentujący działanie wątków. Sprawdź repozytorium projektu w serwisie &lt;a href=https://github.com/Kuszki/PI-Thread-Example&gt;GitHub&lt;/a&gt;.</translation>
     </message>
     <message>
-        <location filename="mainwindow.cpp" line="198"/>
+        <location filename="mainwindow.cpp" line="208"/>
         <source>%1 -&gt; Rolled value %2</source>
         <translation>%1 -&gt; Wylosowano wartość %2</translation>
     </message>
     <message>
-        <location filename="mainwindow.cpp" line="207"/>
+        <location filename="mainwindow.cpp" line="217"/>
         <source>%1 -&gt; All jobs done</source>
         <translation>%1 -&gt; Ukończono wszystkie zadania</translation>
     </message>
