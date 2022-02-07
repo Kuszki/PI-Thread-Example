@@ -99,7 +99,7 @@ void WorkerObject::setMinSleep(unsigned newMinSleep)
 	QMutexLocker locker(&m_mutex); // Zablokuj mutex
 
 	// Gdy ustawienia są poprawne - zapisz je
-	if (m_maxSleep > newMinSleep)
+	if (m_maxSleep >= newMinSleep)
 		m_minSleep = newMinSleep;
 }
 
@@ -123,7 +123,7 @@ void WorkerObject::setMaxSleep(unsigned newMaxSleep)
 	QMutexLocker locker(&m_mutex); // Zablokuj mutex
 
 	// Gdy ustawienia są poprawne - zapisz je
-	if (m_minSleep < newMaxSleep)
+	if (m_minSleep <= newMaxSleep)
 		m_maxSleep = newMaxSleep;
 }
 
@@ -133,7 +133,7 @@ void WorkerObject::setSleepRange(unsigned newMinSleep,
 	QMutexLocker locker(&m_mutex); // Zablokuj mutex
 
 	// Gdy ustawienia są poprawne - zapisz je
-	if (newMinSleep < newMaxSleep)
+	if (newMinSleep <= newMaxSleep)
 	{
 		m_minSleep = newMinSleep;
 		m_maxSleep = newMaxSleep;
@@ -163,7 +163,7 @@ void WorkerObject::setSettings(const Settings& settings)
 
 void WorkerObject::generateValues(unsigned count)
 {
-	if (!tryLock()) return; // Uzyskaj blokadę.
+	if (!this->tryLock()) return; // Uzyskaj blokadę.
 
 	// Pobierz wątek, w którym uruchomiono metodę
 	QThread* currThread = QThread::currentThread();
@@ -173,18 +173,22 @@ void WorkerObject::generateValues(unsigned count)
 	emit progressUpdate(0); // Ustaw zerowy postęp obliczeń
 
 	// Wykonaj zadaną liczbę obliczeń
-	for (int i = 1; i <= count; ++i)
+	for (unsigned i = 1; i <= count; ++i)
 	{
+		if (isTerminated()) break; // Zakończ obliczenia, jeśli potrzeba
+
 		// Wylosuj opóżnienie za pomocą pomocniczego generatora
-		const int sleep = rand.bounded(m_minSleep, m_maxSleep);
+		// lub wybierz stałe, jeśli nie podano przedziału
+		const int sleep = m_minSleep < m_maxSleep
+		                  ? rand.bounded(m_minSleep, m_maxSleep)
+		                  : qMin(m_minSleep, m_maxSleep);
+
 		const int n = getValue(); // Losuj wartość
 
 		currThread->msleep(sleep); // Opóźnij wątek
 
 		emit progressUpdate(i); // Aktualizuj postęp
 		emit valueReady(n); // Przekaż wygenerowaną wartość
-
-		if (isTerminated()) break; // Zakończ obliczenia, jeśli potrzeba
 	}
 
 	this->unlock(); // Odblokuj możliwość wykonania obliczeń
