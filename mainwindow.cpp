@@ -19,6 +19,8 @@
  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 
 #include "mainwindow.hpp"
+#include "qaction.h"
+#include "qtextbrowser.h"
 #include "ui_mainwindow.h"
 
 MainWindow::MainWindow(QWidget *parent)
@@ -109,6 +111,10 @@ MainWindow::MainWindow(QWidget *parent)
 	// Otwieranie ustawień
 	connect(ui->actionSettings, &QAction::triggered,
 	        this, &MainWindow::settingsClicked);
+
+	// Czyszczenie okna komunikatów
+	connect(ui->actionClear, &QAction::triggered,
+	        ui->textBrowser, &QTextBrowser::clear);
 }
 
 MainWindow::~MainWindow(void)
