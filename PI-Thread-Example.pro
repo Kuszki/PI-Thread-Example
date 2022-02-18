@@ -18,3 +18,6 @@ FORMS += \
 
 TRANSLATIONS += \
     PI-Thread-Example_pl_PL.ts
+
+DEFINES += GIT_HASH_SHORT="\\\"$(shell git -C \""$$_PRO_FILE_PWD_"\" rev-parse --short HEAD)\\\""
+DEFINES += GIT_HASH_LONG="\\\"$(shell git -C \""$$_PRO_FILE_PWD_"\" rev-parse HEAD)\\\""

@@ -25,6 +25,8 @@
 #include <QLocale> // Klasa obsługująca lokalizacje
 #include <QTranslator> // Klasa obsługująca tłumaczenia
 
+#include <QDebug>
+
 int main(int argc, char *argv[])
 {
 	QApplication a(argc, argv); // Utworzenie obiektu aplikacji
@@ -61,6 +63,8 @@ int main(int argc, char *argv[])
 			break; // Zakończenie wyszukiwania
 		}
 	}
+
+	qDebug() << GIT_HASH_SHORT;
 
 	MainWindow w; // Utworzenie okna głównego
 	w.show(); // Wyświetlenie okna głównego
