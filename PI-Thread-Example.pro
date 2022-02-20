@@ -1,3 +1,6 @@
+DEFINES += GIT_HASH_SHORT=\\\"$$system("git rev-parse --short HEAD")\\\"
+DEFINES += GIT_HASH_LONG=\\\"$$system("git rev-parse HEAD")\\\"
+
 QT      += core gui widgets
 CONFIG  += c++17
 
@@ -18,6 +21,3 @@ FORMS += \
 
 TRANSLATIONS += \
     PI-Thread-Example_pl_PL.ts
-
-DEFINES += GIT_HASH_SHORT="\\\"$(shell git -C \""$$_PRO_FILE_PWD_"\" rev-parse --short HEAD)\\\""
-DEFINES += GIT_HASH_LONG="\\\"$(shell git -C \""$$_PRO_FILE_PWD_"\" rev-parse HEAD)\\\""
