@@ -106,17 +106,17 @@
     </message>
     <message>
         <location filename="mainwindow.cpp" line="197"/>
-        <source>PI-Thread-Example program. See project repository at &lt;a href=&apos;https://github.com/Kuszki/PI-Thread-Example&apos;&gt;GitHub&lt;/a&gt; (build &lt;a href=&apos;https://github.com/Kuszki/PI-Thread-Example/commit/%1&apos;&gt;%2&lt;/a&gt;).</source>
-        <oldsource>PI-Thread-Example program. See project repository at &lt;a href=https://github.com/Kuszki/PI-Thread-Example&gt;GitHub&lt;/a&gt; (build &lt;a href=https://github.com/Kuszki/PI-Thread-Example/commit/</oldsource>
-        <translation>Przykładowy program prezentujący działanie wątków. Sprawdź repozytorium projektu w serwisie &lt;a href=&apos;https://github.com/Kuszki/PI-Thread-Example&apos;&gt;GitHub&lt;/a&gt; (build &lt;a href=&apos;https://github.com/Kuszki/PI-Thread-Example/commit/%1&apos;&gt;%2&lt;/a&gt;).</translation>
+        <source>PI-Thread-Example program build &lt;a href=&apos;https://github.com/Kuszki/PI-Thread-Example/commit/%1&apos;&gt;%2&lt;/a&gt;. See project repository at &lt;a href=&apos;https://github.com/Kuszki/PI-Thread-Example&apos;&gt;GitHub&lt;/a&gt;.</source>
+        <oldsource>PI-Thread-Example program. See project repository at &lt;a href=&apos;https://github.com/Kuszki/PI-Thread-Example&apos;&gt;GitHub&lt;/a&gt; (build &lt;a href=&apos;https://github.com/Kuszki/PI-Thread-Example/commit/%1&apos;&gt;%2&lt;/a&gt;).</oldsource>
+        <translation>Przykładowy program prezentujący działanie wątków wersja &lt;a href=&apos;https://github.com/Kuszki/PI-Thread-Example/commit/%1&apos;&gt;%2&lt;/a&gt;. Sprawdź repozytorium projektu w serwisie &lt;a href=&apos;https://github.com/Kuszki/PI-Thread-Example&apos;&gt;GitHub&lt;/a&gt;.</translation>
     </message>
     <message>
-        <location filename="mainwindow.cpp" line="210"/>
+        <location filename="mainwindow.cpp" line="211"/>
         <source>%1 -&gt; Rolled value %2</source>
         <translation>%1 -&gt; Wylosowano wartość %2</translation>
     </message>
     <message>
-        <location filename="mainwindow.cpp" line="219"/>
+        <location filename="mainwindow.cpp" line="220"/>
         <source>%1 -&gt; All jobs done</source>
         <translation>%1 -&gt; Ukończono wszystkie zadania</translation>
     </message>

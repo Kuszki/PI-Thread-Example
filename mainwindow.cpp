@@ -194,10 +194,11 @@ void MainWindow::settingsClicked(void)
 void MainWindow::aboutClicked(void)
 {
 	QMessageBox::about(this, tr("About program"),
-	                   tr("PI-Thread-Example program. See project repository at "
-	                      "<a href='https://github.com/Kuszki/PI-Thread-Example'>GitHub</a> "
-	                      "(build <a href='https://github.com/Kuszki/PI-Thread-Example/commit/%1'>%2</a>).")
-	                   .arg(GIT_HASH_LONG).arg(GIT_HASH_SHORT));
+	                   tr("PI-Thread-Example program build "
+	                      "<a href='https://github.com/Kuszki/PI-Thread-Example/commit/%1'>%2</a>. "
+	                      "See project repository at "
+	                      "<a href='https://github.com/Kuszki/PI-Thread-Example'>GitHub</a>.")
+	                   .arg(GIT_HASH_LONG, GIT_HASH_SHORT));
 }
 
 void MainWindow::aboutqtClicked(void)
