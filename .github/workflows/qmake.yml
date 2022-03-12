@@ -23,6 +23,3 @@ jobs:
     - name: Make
       run: make
     
-    - name: Test
-      run: ctest
-    
